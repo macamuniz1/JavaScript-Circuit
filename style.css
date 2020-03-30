@@ -1,0 +1,145 @@
+h1 {
+  text-align: center;
+  font-family: "Arial Black";
+  font-size: 50px;
+  color: pink;
+
+}
+
+h2{
+  text-align: Left;
+  font-family: 'proxima-nova', sans-serif;;
+  font-size: 20px;
+  font-weight: 200;
+  color: #2d2d2d;
+}
+
+h3{
+  text-align: Left;
+  font-family: 'proxima-nova', sans-serif;;
+  font-size: 12px;
+  font-weight: 200;
+  color: #2d2d2d;
+}
+
+h4{
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;;
+  font-size: 30px;
+  font-weight: 400;
+  color: #2d2d2d;
+  padding: 20px 0 40px 0;
+
+}
+
+p{
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2d2d2d;
+  padding: 20px 0 40px 0;
+
+}
+
+input{
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+}
+td{
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;;
+  font-size: 18px;
+  font-weight: 200;
+  color: #2d2d2d;
+  padding: 10px 0 10px 0;
+}
+
+th{
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d2d2d;
+
+}
+
+
+table{
+
+padding: 20px;
+}
+
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding: 30px;
+}
+
+.reservation-button {
+color: #2f2f2f;
+background-color: white;
+width: 200px;
+height: 50px;
+border-radius: 50px;
+margin: 20px 0 10px 0;
+border: 0px;
+
+}
+
+.make-reservation {
+display: inline-block;
+background-color: pink;
+padding: 50px 0 50px 70px;
+width: 40%;
+height: 300px;
+}
+
+.display-reservation{
+display: inline-block;
+vertical-align: top;
+ padding: 50px 0 50px 70px;
+  width: 40%;
+  height: 300px;
+}
+
+#map{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 99%;
+  height: 500px;
+}
+
+.reviews-image {
+  display: inline-flex;
+  float: left;
+    width: 50%;
+}
+
+.review-text {
+  background-color: rgb(255,192,203,0.25);
+  display: inline-block;
+  float: right;
+   padding: 50px;
+    width: 40%;
+    text-align: center;
+    height: 290px;
+}
+
+.stars{
+  align-items: center;
+  width: 100px;
+}
+
+.footer{
+  display: block;
+margin-top: 200px;
+padding-top:200px;
+text-align: center;
+clear: both;
+
+}

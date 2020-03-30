@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/javascript-circuit/style.css">
+  <title>Clavel</title>
+  </head>
+<body>
+  <!-- Header -->
+<div>
+  <h1>Clavel</h1>
+  <img class="banner" src="/javascript-circuit/Assets/banner.jpg" />
+</div>
+
+<!-- Reservations -->
+<div class="banner">
+ <h4>Reservations</h4>
+
+  <!-- make a reservation -->
+  <div class="make-reservation">
+<h2>Make a reservation</h2>
+<form class="reservation-form">
+   <h3>Your Name</h3>
+    <input class="userName" type="text" placeholder="">
+  <h3>Enter a date</h3>
+     <input class="userDate" type="text" placeholder=""> <br />
+    <button class="reservation-button">Confirm Reservation</button>
+</form>
+  </div>
+
+<!-- display reservation -->
+  <div class="display-reservation">
+    <h2 style="text-align: center;">Existing reservations</h2>
+    <table class="table-reservation"style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+    </tr>
+    <tr>
+      <td>Macarena Muniz</td>
+      <td>March 30, 2020</td>
+    </tr>
+  </table>
+  </div>
+
+</div>
+<!-- map section -->
+<div class="banner">
+  <h4 style="text-align: center;">Come Dine with Us</h4>
+  <div id="map"></div>
+</div>
+<!-- Reviews -->
+<div class="banner">
+  <h4 style="text-align: center;">Customer Reviews</h4>
+  <!-- image -->
+  <div>
+    <img class="reviews-image"src="/javascript-circuit/Assets/tea.jpg"/>
+  </div>
+
+  <!-- text -->
+  <div class="review-text">
+    <h2 style="text-align: center;">Juanita Perez</h2>
+    <img class="stars"src="/javascript-circuit/Assets/stars.png" />
+    <p>
+      Excelent service. Best high tea experience in my life. The food was super tasty and the presentation is probably as good as a 3 michellin stars restaurant.
+    </p>
+  </div>
+</div>
+
+<!-- footer -->
+<p class="footer">
+  Site created by Macarena Muniz.
+</p>
+<!-- Script -->
+<script  src="/javascript-circuit/JS/jquery-3.4.1.min.js"></script>
+<script  src="/javascript-circuit/JS/main.js"></script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6D2mLWJiyBU6xblTYCsAXy3ZR9oPR-60&callback=initMap"></script>
+</body>
+</html>
