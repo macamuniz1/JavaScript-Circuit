@@ -46,6 +46,9 @@ input{
   width: 80%;
   height: 40px;
   border-radius: 5px;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 14px;
+  padding: 0 20px 0 20px;
 }
 td{
   text-align: center;
@@ -142,4 +145,22 @@ padding-top:200px;
 text-align: center;
 clear: both;
 
+}
+
+.dayoff{
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  color: #2f2f2f;
+  border-radius: 3px;
+  border: 0px;
+}
+
+.dayoff:focus{
+  width: 100px;
+  height: 30px;
+  background-color: firebrick;
+  color: white;
+  border-radius: 3px;
+  border: 0px;
 }

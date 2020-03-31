@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="/javascript-circuit/style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
   <title>Clavel</title>
   </head>
 <body>
   <!-- Header -->
 <div>
   <h1>Clavel</h1>
-  <img class="banner" src="/javascript-circuit/Assets/banner.jpg" />
+  <img class="banner" src="/Assets/banner.jpg" />
 </div>
 
 <!-- Reservations -->
@@ -21,12 +21,19 @@
   <!-- make a reservation -->
   <div class="make-reservation">
 <h2>Make a reservation</h2>
+<h5>
+  Same day reservations only
+</h5>
 <form class="reservation-form">
    <h3>Your Name</h3>
     <input class="userName" type="text" placeholder="">
-  <h3>Enter a date</h3>
-     <input class="userDate" type="text" placeholder=""> <br />
-    <button class="reservation-button">Confirm Reservation</button>
+  <h3>Select a time</h3>
+  <div class="dayoptions" >
+    <button class="dayoff" type="button"> 6:00PM </button>
+    <button  class="dayoff" type="button"> 6:30PM </button>
+    <button  class="dayoff" type="button"> 9:00PM </button>
+  </div>
+    <button class="reservation-button" type="submit">Confirm Reservation</button>
 </form>
   </div>
 
@@ -56,13 +63,13 @@
   <h4 style="text-align: center;">Customer Reviews</h4>
   <!-- image -->
   <div>
-    <img class="reviews-image"src="/javascript-circuit/Assets/tea.jpg"/>
+    <img class="reviews-image"src="/Assets/tea.jpg"/>
   </div>
 
   <!-- text -->
   <div class="review-text">
     <h2 style="text-align: center;">Juanita Perez</h2>
-    <img class="stars"src="/javascript-circuit/Assets/stars.png" />
+    <img class="stars"src="/Assets/stars.png" />
     <p>
       Excelent service. Best high tea experience in my life. The food was super tasty and the presentation is probably as good as a 3 michellin stars restaurant.
     </p>
@@ -74,8 +81,9 @@
   Site created by Macarena Muniz.
 </p>
 <!-- Script -->
-<script  src="/javascript-circuit/JS/jquery-3.4.1.min.js"></script>
-<script  src="/javascript-circuit/JS/main.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+<script  src="/JS/jquery-3.4.1.min.js"></script>
+<script  src="/JS/main.js"></script>
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6D2mLWJiyBU6xblTYCsAXy3ZR9oPR-60&callback=initMap"></script>
 </body>
 </html>

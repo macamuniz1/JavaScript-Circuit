@@ -1,168 +1,40 @@
 
+var firebaseConfig = {
+  apiKey: "AIzaSyDFMGKA1wyzYxS5VfNu2MPzzfJaS90MCw4",
+  authDomain: "final-project-mm.firebaseapp.com",
+  databaseURL: "https://final-project-mm.firebaseio.com",
+  projectId: "final-project-mm",
+  storageBucket: "final-project-mm.appspot.com",
+  messagingSenderId: "135010229483",
+  appId: "1:135010229483:web:99f329ec2f48d408d932ae"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
 
 function initMap() {
 
-var stylers =
-[
+var styles = [
   {
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
+    stylers: [
+      {hue: "#FFC0CB"},
+      { saturation: -20}
     ]
-  },
-  {
-    "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
+  },{
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      {lightness: 100},
+      {visibility: "simplified"}
     ]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#f5f5f5"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.land_parcel",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#bdbdbd"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#dadada"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "transit.line",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
-  },
-  {
-    "featureType": "transit.station",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#ffc0cb"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
+  },{
+    featureType: "road",
+    elementType: "labels",
+    stylers: [
+      {visibility: "off"}
     ]
   }
-]
+];
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -33.390582, lng: -70.546035},
@@ -174,4 +46,27 @@ var stylers =
     map: map,
     title: 'Clavel Cafeteria'
 });
-}
+};
+
+
+
+var reservationData = {};
+
+$(".dayoff").on("click", function(){
+  reservationData.day = $(this).text();
+});
+
+$(".reservation-form").on('submit', function(e){
+
+  e.preventDefault();
+  reservationData.name = $(".userName").val();
+  $(".userName").val("");
+
+  console.log('reservationData');
+
+  var firebaseData = database.ref('reservations');
+
+  firebaseData.push(reservationData);
+
+  $(".make-reservation").html("<h2>Thank you! See you soon</h2>");
+});
