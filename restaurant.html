@@ -28,11 +28,12 @@
    <h3>Your Name</h3>
     <input class="userName" type="text" placeholder="">
   <h3>Select a time</h3>
-  <div class="dayoptions" >
+  <div id="dayoptions" >
     <button class="dayoff" type="button"> 6:00PM </button>
     <button  class="dayoff" type="button"> 6:30PM </button>
     <button  class="dayoff" type="button"> 9:00PM </button>
   </div>
+  <h5 id="error" style="color: red; padding: 0;"></h5>
     <button class="reservation-button" type="submit">Confirm Reservation</button>
 </form>
   </div>
@@ -45,10 +46,12 @@
       <th>Name</th>
       <th>Date</th>
     </tr>
+    <script id="entry-template" type="text/x-handlebars-template">
     <tr>
-      <td>Macarena Muniz</td>
-      <td>March 30, 2020</td>
+      <td>{{clientName}}</td>
+      <td>{{clientDate}}</td>
     </tr>
+       </script>
   </table>
   </div>
 
@@ -81,8 +84,9 @@
   Site created by Macarena Muniz.
 </p>
 <!-- Script -->
-<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
 <script  src="/JS/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script  src="/JS/main.js"></script>
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6D2mLWJiyBU6xblTYCsAXy3ZR9oPR-60&callback=initMap"></script>
 </body>
