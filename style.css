@@ -115,7 +115,7 @@ height: 350px;
 .display-reservation{
 display: inline-block;
 vertical-align: top;
- padding: 50px 50px 50px 70px;
+ padding: 50px 0 50px 70px;
   width: 40%;
   height: 300px;
 }
@@ -135,7 +135,7 @@ vertical-align: top;
 }
 
 .review-text {
-  background-color: rgb(255,192,203,0.25);
+  /* background-color: rgb(255,192,203,0.25); */
   display: inline-block;
   float: right;
    padding: 50px;
