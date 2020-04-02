@@ -13,20 +13,8 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 
+
 function initMap() {
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -33.390582, lng: -70.546035},
-    zoom: 15,
-    scrollwheel: false
-  });
-
-  var marker = new google.maps.Marker({
-  position: {lat: -33.390582, lng: -70.546035},
-    map: map,
-    title: 'Clavel Cafeteria'
-});
-
   var styles = [
     {
       stylers: [
@@ -48,6 +36,21 @@ function initMap() {
       ]
     }
   ];
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.390582, lng: -70.546035},
+    zoom: 15,
+    scrollwheel: false,
+    styles: styles
+  });
+
+  var marker = new google.maps.Marker({
+  position: {lat: -33.390582, lng: -70.546035},
+    map: map,
+    title: 'Clavel Cafeteria'
+});
+
+
 
 };
 
